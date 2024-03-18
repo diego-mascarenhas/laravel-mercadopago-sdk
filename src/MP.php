@@ -39,7 +39,7 @@ class MP
             $this->ll_access_token = func_get_arg(0);
         }
 
-        if ($i == 2)
+        if ($i >= 2)
         {
             $this->client_id = func_get_arg(0);
             $this->client_secret = func_get_arg(1);
