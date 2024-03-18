@@ -1,0 +1,24 @@
+{
+    "name": "diego-mascarenhas/laravel-mercadopago-sdk",
+    "description": "Mercado Pago SDK v0.6.1 for Laravel",
+    "keywords": [
+        "laravel",
+        "mercadopago",
+        "sdk"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diego Mascarenhas Goytía",
+            "email": "diego.mascarenhas@icloud.com"
+        }
+    ],
+    "require": {
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DiegoMascarenhas\\MercadoPago\\": "src/"
+        }
+    }
+}
