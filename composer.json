@@ -1,9 +1,11 @@
 {
     "name": "diego-mascarenhas/laravel-mercadopago-sdk",
-    "description": "Mercado Pago SDK v0.6.1 for Laravel",
+    "description": "Mercado Pago SDK v0.6.3 for Laravel",
     "keywords": [
+        "php",
         "laravel",
         "mercadopago",
+        "ecommerce",
         "sdk"
     ],
     "license": "MIT",

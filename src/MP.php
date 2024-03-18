@@ -16,14 +16,13 @@ $GLOBALS["LIB_LOCATION"] = dirname(__FILE__);
 class MP
 {
 
-    const version = "0.6.1";
+    const version = "0.6.3";
 
     private $client_id;
     private $client_secret;
     private $ll_access_token;
     private $access_data;
-    private $ssl;
-    private $sandbox = FALSE;
+    private $sandbox = false;
 
     function __construct()
     {
@@ -39,18 +38,11 @@ class MP
             $this->ll_access_token = func_get_arg(0);
         }
 
-        if ($i >= 2)
+        if ($i == 2)
         {
             $this->client_id = func_get_arg(0);
             $this->client_secret = func_get_arg(1);
         }
-
-        $this->ssl = func_get_arg(2);
-    }
-
-    function getSsl()
-    {
-        return $this->ssl;
     }
 
     public function sandbox_mode($enable = NULL)
@@ -515,7 +507,7 @@ class MPRestClient
 
         curl_setopt($connect, CURLOPT_USERAGENT, "MercadoPago PHP SDK v" . MP::version);
         curl_setopt($connect, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($connect, CURLOPT_SSL_VERIFYPEER, (new MP())->getSsl());
+        curl_setopt($connect, CURLOPT_SSL_VERIFYPEER, config('mercadopago.app_ssl'));
         curl_setopt($connect, CURLOPT_CAINFO, $GLOBALS["LIB_LOCATION"] . "/cacert.pem");
         curl_setopt($connect, CURLOPT_CUSTOMREQUEST, $request["method"]);
         curl_setopt($connect, CURLOPT_HTTPHEADER, $headers);

@@ -1,4 +1,4 @@
-# Laravel Facade para MercadoPago v0.6.2
+# Laravel Facade para MercadoPago v0.6.3
 
 * [Instalation](#install)
 * [Configuration](#configuration)
